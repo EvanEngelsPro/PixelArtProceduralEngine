@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Pixel Art Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Image to Pixel Art</h1>
+            <p class="subtitle">Transform any image into stunning pixel art</p>
+        </header>
+
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+            <button id="uploadBtn" class="upload-btn">📁 Upload Image</button>
+            <div class="url-input-group">
+                <input type="text" id="urlInput" placeholder="Or paste image URL...">
+                <button id="loadUrl">Load</button>
+            </div>
+        </div>
+
+        <!-- Canvas Section -->
+        <div class="canvas-section">
+            <canvas id="canvas"></canvas>
+            <div class="download-buttons">
+                <button id="downloadSmall" class="download-btn">⬇️ Download Small</button>
+                <button id="downloadLarge" class="download-btn primary">⬇️ Download Large</button>
+            </div>
+        </div>
+
+        <!-- Controls Section -->
+        <div class="controls-section">
+            <div class="control-group">
+                <h3>Pixelization</h3>
+                <div class="slider-control">
+                    <label>
+                        <span>Pixel Size</span>
+                        <span id="pixelSizeValue">8</span>
+                    </label>
+                    <input type="range" id="pixelSize" min="1" max="32" value="8">
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="control-group">
+                <h3>Adjustments</h3>
+                <div class="slider-control">
+                    <label>
+                        <span>Brightness</span>
+                        <span id="brightnessValue">0</span>
+                    </label>
+                    <input type="range" id="brightness" min="-100" max="100" value="0">
+                </div>
+                <div class="slider-control">
+                    <label>
+                        <span>Contrast</span>
+                        <span id="contrastValue">0</span>
+                    </label>
+                    <input type="range" id="contrast" min="-100" max="100" value="0">
+                </div>
+                <div class="slider-control">
+                    <label>
+                        <span>Saturation</span>
+                        <span id="saturationValue">0</span>
+                    </label>
+                    <input type="range" id="saturation" min="-100" max="100" value="0">
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="control-group">
+                <button id="reset" class="reset-btn">↺ Reset to Original</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
