@@ -1,5 +1,3 @@
-import { getIndex } from "../engine/utils.js";
-
 /**
  * Adjust brightness of an image
  * @param {ImageData} imageData - The image data to adjust
