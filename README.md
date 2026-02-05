@@ -1,4 +1,4 @@
-#PixelArtProceduralEngine
+# PixelArtProceduralEngine
 
 PixelArtProceduralEngine is now a web-based image to pixel art editor.
 
